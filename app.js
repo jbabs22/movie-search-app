@@ -8,7 +8,7 @@ form.addEventListener("submit", async (event) => {
   await searchMovies(movieName);
 });
 
-// Retrieve Movies Found by Searched Input
+// Search Movie Name to find 1 to many results
 async function searchMovies(movieName) {
   const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}`;
   const response = await axios.get(apiUrl);
@@ -16,9 +16,16 @@ async function searchMovies(movieName) {
   const resultsContainer = document.getElementById("results");
   resultsContainer.innerHTML = "";
 
-  // TO DO - add error if values are not found
+  // Error Handler for Error Message/No results found
+  if (!results || response.data.Error) {
+    const errorMessage = document.createElement("p");
+    errorMessage.classList.add("error-message");
+    errorMessage.textContent = "No results found. Please try a new search.";
+    resultsContainer.appendChild(errorMessage);
+    return;
+  }
 
-  // search results - anchor tag created for each movie title & poster
+  // searchMovies results - Anchor tags for each movie with Title & Poster
   for (const movie of results) {
     const movieLink = document.createElement("a");
     movieLink.href = "#";
