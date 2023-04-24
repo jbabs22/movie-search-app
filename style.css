@@ -75,7 +75,7 @@ input[type="submit"]:hover {
 }
 
 .movie-item a:hover {
-  background-color: aqua;
+  background-color: gray;
 }
 
 .error-message {
