@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="script.js"></script>
-    <title>Movie Search</title>
-  </head>
+<head>
+  <title>Movie Search App</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="./app.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
   <body>
-    <div class="container">
-      <h1>Movie Search</h1>
-      <input type="text" placeholder="Search Here" id="textInput" />
-      <button id="searchButton">Search</button>
-      <div id="movie"></div>
-    </div>
+    <h1> Movie Search</h1>
+    <form>
+      <input type="text" id="movieName" name="movieName" placeholder="Movie Name">
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
   </body>
 </html>
