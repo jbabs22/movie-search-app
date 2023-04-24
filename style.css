@@ -45,7 +45,7 @@ input[type="submit"]:hover {
 #results {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+  grid-gap: 10px;
   margin-top: 50px;
 }
 
@@ -55,8 +55,8 @@ input[type="submit"]:hover {
   text-align: center;
   width: 120px;
   border-radius: 5px;
-  box-shadow: 0 3px 7px rgba(253, 251, 251, 0.89);
-  background-color: black;
+  box-shadow: 1px 3px 7px rgb(255, 255, 255);
+  background-color: rgba(247, 9, 9, 0.103);
   padding: 30px;
 }
 
